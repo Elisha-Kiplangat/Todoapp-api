@@ -1,0 +1,31 @@
+@Todoapp_HostAddress = http://localhost:5071
+
+GET {{Todoapp_HostAddress}}/api/TodoItems
+Accept: application/json
+
+###
+
+POST  {{Todoapp_HostAddress}}/api/TodoItems
+Content-Type: application/json
+
+{
+    "id" : 1,
+    "name" : "Go to the gym",
+    "isComplete": true
+}
+###
+GET {{Todoapp_HostAddress}}/api/TodoItems
+Accept: application/json
+
+###
+PUT    {{Todoapp_HostAddress}}/api/TodoItems
+Content-Type: application/json
+
+{
+    "id" : 2,
+    "name" : "Go to class",
+    "isComplete": false
+}
+
+###
+DELETE {{Todoapp_HostAddress}}/api/TodoItems/2
